@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/10gb/css/index.css">
+</head>
+<body>
+	<div class="home">
+		<ul>
+			<li><a href="/10gb/">Home</a></li>
+			<li><a href="#news">Order History</a></li>
+			<li><a class="active" href="/10gb/order">Order</a></li>
+			<li class="right"><a href="/10gb/basket">Shopping Basket</a></li>
+			<li class="right"><a href="/10gb/login" id="log">Login</a></li>
+		</ul>
+		<div
+			style="padding: 10px; margin-top: 30px; background-color: #1abc9c; height: 150px;">
+			<h1>Welcome to 10 Green bottles</h1>
+			<h2>Your Destination for Wines</h2>
+		</div>
+		<table id="itms">
+			<tr>
+				<th>Name</th>
+				<th>Case / Bottle</th>
+				<th>Price</th>
+				<th>Quantity</th>
+				<th>Total Amount</th>
+			</tr>
+		</table>
+		<div class="collection-sort">
+			<label> Choose your address:</label> <select id="adrss">
+			</select> <br>
+			<br> <label> New address ?</label>
+			<textarea placeholder="New address here" rows="5" cols="30" id="addy"></textarea>
+			<br>
+			<div class="btn-group">
+				<button onclick="saveAddr()">Save address</button>
+			</div>
+			<br> Payment Details:<br> <input id="pd" type="text" name="payment">
+			<br>
+			<br>
+		</div>
+		<br>
+		<div class="btn-group">
+			<button onclick="window.location.replace('/10gb/basket');"><< Back to cart</button>
+			<button onclick="cashOut()">Proceed to payment >></button>
+		</div>
+	</div>
+	<script src="/10gb/js/jquery.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/10gb/js/log.js"></script>
+	<script type="text/javascript" src="/10gb/js/order.js"></script>
+	<!-- <script type="text/javascript" src="/10gb/js/basket.js"></script>  -->
+</body>
+</html>

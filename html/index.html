@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/10gb/css/index.css">
+</head>
+<body>
+	<div class="home">
+		<ul>
+			<li><a class="active" href="/10gb/">Home</a></li>
+			<li><a href="#news">Order History</a></li>
+			<li><a href="#more">More</a></li>
+			<li class="right"><a href="/10gb/basket">Shopping Basket</a></li>
+			<li class="right"><a href="/10gb/login" id="log">Login</a></li>
+		</ul>
+		<div style="padding: 10px; margin-top: 30px; background-color: #1abc9c; height: 150px;">
+			<h1>Welcome to 10 Green bottles</h1>
+			<h2>Your Destination for Wines</h2>
+		</div>
+		<nav class="product-filter" style="background-color: #add8e6">
+			<h1>Choose Your Wine</h1>
+			<div class="sort">
+				<div class="collection-sort">
+					<label>Filter by Category:</label> <select id="cat"
+						onchange="catSelection(this)">
+						<option value="All">All</option>
+						<option value="Red">Red</option>
+						<option value="White">White</option>
+						<option value="Rose">Rose</option>
+					</select>
+				</div>
+				<div class="collection-sort">
+					<label>Subcategory:</label> <select id="sub" onchange="printWines(lines);">
+						<option value="All">All</option>
+						<option id="sub_light" value="Light">Light</option>
+						<option id="sub_full" value="Full-bodied">Full-bodied</option>
+						<option id="sub_dry" value="Dry">Dry</option>
+						<option id="sub_sweet" value="Sweet">Sweet</option>
+					</select>
+				</div>
+			</div>
+		</nav>
+		<div class="products" id="wines"></div>
+	</div>
+	<script type="text/javascript" src="/10gb/js/jquery.js"></script>
+	<script type="text/javascript" src="/10gb/js/log.js"></script>
+	<script type="text/javascript" src="/10gb/js/bskt.js"></script>
+	<script type="text/javascript" src="/10gb/js/index.js"></script>
+</body>
+</html>

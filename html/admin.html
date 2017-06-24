@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/10gb/css/main.css">
+<title>10 GB Admin</title>
+</head>
+<body>
+	<div id="headerz">
+		<h1>10 GB Admin</h1>
+	</div>
+	<div id="containi">
+		<h2>Users</h2>
+		<div>
+			<div id="admin">
+				<h3>Create Administrator Account</h3>
+				<fieldset>
+					<label for="admin_usr">Username: </label> <input type="text"
+						placeholder="Username" id="admin_usr" required>
+				</fieldset>
+				<fieldset>
+					<label for="admin_email">Email Address: </label> <input
+						type="email" placeholder="pl@ce.hol" id="admin_email" required>
+				</fieldset>
+				<fieldset>
+					<label for="admin_pass">Password: </label> <input type="password"
+						placeholder="Password" id="admin_pass" required>
+				</fieldset>
+				<button onclick="makeAdmin()">Create Administrator</button>
+				<div id="admin_status"></div>
+			</div>
+			<div id="users">
+				<h3>View Customers</h3>
+				<div id="users_customers"></div>
+			</div>
+			<div id="wines">
+				<h3>Wines</h3>
+				<details>
+				<summary>Wines List</summary>
+				<div id="wines_list"></div>
+				</details>
+				<details>
+					<summary>Create Wine</summary>
+					<div id="wines_create">
+						<fieldset>
+							<label for="wines_name">Name: </label> <input type="text"
+								placeholder="Wine Name" id="wines_name" name="name" required>
+						</fieldset>
+						<fieldset>
+							<label for="wines_cat">Category: </label> <select
+								onchange="catsel(this)" id="wines_cat" name="winecategoryid">
+								<option value="1">Red</option>
+								<option value="2">White</option>
+								<option value="3">Rosé</option>
+							</select>
+						</fieldset>
+						<fieldset id="fs_wsubcat">
+							<label for="wines_subcat">Sub Category: </label> <select
+								id="wines_subcat">
+								<option value="1">Dry</option>
+								<option value="2">Sweet</option>
+								<option value="3">Light</option>
+								<option value="4">Full-bodied</option>
+							</select>
+						</fieldset>
+						<fieldset>
+							<label for="wines_desc">Description: </label> <input type="text"
+								placeholder="A short description about the wine"
+								name="description" id="wines_desc" required>
+						</fieldset>
+						<fieldset>
+							<label for="wines_country">Country: </label> <select
+								name="country" id="wines_country">
+								<option value="Chile">Chile</option>
+								<option value="France">France</option>
+								<option value="Spain">Spain</option>
+								<option value="United Kingdom">United Kingdom</option>
+								<option value="United States of America">United States
+									of America</option>
+							</select>
+						</fieldset>
+						<fieldset>
+							<label for="wines_pb">£ per bottle: </label> <input type="number"
+								placeholder="4.99" id="wines_pb" name="price_bottle" required>
+						</fieldset>
+						<fieldset>
+							<label for="wines_pc">£ per case: </label> <input type="number"
+								placeholder="21.99" id="wines_pc" name="price_case" required>
+						</fieldset>
+						<fieldset>
+							<label for="wines_bs">Bottle Size: </label> <select id="wines_bs"
+								name="bottle_size">
+								<option value="750">750ml</option>
+								<option value="1000">1000ml</option>
+							</select>
+						</fieldset>
+						<fieldset>
+							<label for="wines_bc">Bottles per case: </label> <input
+								type="number" placeholder="5" id="wines_bc"
+								name="bottles_per_case" required>
+						</fieldset>
+						<fieldset>
+							<label for="wines_bl">Bottles left in stock: </label> <input
+								type="number" placeholder="1336" id="wines_bl" required>
+						</fieldset>
+						<fieldset>
+							<label for="wines_cl">Cases left in stock: </label> <input
+								type="number" placeholder="9001" id="wines_cl" required>
+						</fieldset>
+						<fieldset>
+							<label for="wines_url">Image </label> <input id="wines_image"
+								type="file">
+						</fieldset>
+						<button onclick="uploadFile()">Create Wine</button>
+						<div id="wines_alert"></div>
+					</div>
+				</details>
+			</div>
+		</div>
+	</div>
+	<script src="/10gb/js/jquery.js" type="text/javascript"></script>
+	<script src="/10gb/js/admin.js" type="text/javascript"></script>
+</body>
+</html>
