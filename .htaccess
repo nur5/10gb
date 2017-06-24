@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule api/(.*)$ php/api/api.php?request=$1 [QSA,NC,L]
+RewriteRule wine/(.*)$ php/view/wine.php?id=$1 [QSA,NC,L]
+RewriteRule ^register$ html/register.html [NC,L]
+RewriteRule ^admin$ html/admin.html [NC,L]
+RewriteRule ^login$ html/login.html [NC,L]
+RewriteRule ^$ html/index.html [NC,L]
+RewriteRule ^basket$ html/basket.html [NC,L]
+RewriteRule ^order$ html/order.html [NC,L]
+</IfModule>
